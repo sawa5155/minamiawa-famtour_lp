@@ -279,7 +279,7 @@ body {
   z-index: 2;
   max-width: 136.6rem;
   margin: 0 auto;
-  padding: 22rem 0 0 8.8rem;
+  padding: 17.2rem 0 0 8.8rem;
 }
 .hero__lead {
   width: fit-content;
@@ -1337,7 +1337,8 @@ body {
   .hero__desc br { display: none; }
   .hero__info { margin-top: 3rem; }
   .hero__info-row { flex-wrap: wrap; margin-bottom: .7rem; align-items: start; }
-  .hero__info-row:nth-child(2) { margin-bottom: 0; align-items: center; }
+  .hero__info-row:nth-child(n+2) { align-items: center; }
+  .hero__info-row:last-child { margin-bottom: 0; }
   .hero__info-row dt { width: 6.5rem; padding: .6rem 0; margin-right: 1.1rem; font-size: 1.1rem; }
   .hero__info-row dd { font-size: 1.4rem; }
   .hero__info-row:nth-child(2) dd { font-size: 1.6rem; }
