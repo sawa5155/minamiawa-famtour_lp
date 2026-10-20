@@ -791,7 +791,7 @@ body {
    CONTENTS  このツアーで体験できること
    ========================================================= */
 .contents {
-  padding: 9.4rem 22.6rem 8.2rem;
+  padding: 9.4rem 11.3rem 8.2rem;
   background: #fff;
 }
 .contents__list {
@@ -799,13 +799,14 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.contents__item { text-align: center; }
-.contents__icon {
-  height: 11.9rem;
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 2.9rem;
+.contents__item { width: 26rem; text-align: center; }
+.contents__photo {
+  aspect-ratio: 3 / 2;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  margin-bottom: 2.4rem;
 }
-.contents__icon img { width: auto; height: 11.9rem; }
+.contents__photo img { width: 100%; height: 100%; object-fit: cover; }
 .contents__name {
   color: var(--navy);
   font-size: 2.1rem;
@@ -820,11 +821,18 @@ body {
   letter-spacing: .07em;
 }
 
+/* ツアースケジュール（幅はバナーと揃える） */
+.schedule {
+  display: block;
+  margin: 12.3rem 12rem 0;
+}
+.schedule img { width: 100%; height: auto; }
+
 /* 募集要項バナー */
 .banner {
   position: relative;
   display: block;
-  margin: 12.3rem .7rem 0;
+  margin: 12.3rem 12rem 0; /* contents の左右paddingを詰めた分を足し、バナー幅は据え置き */
   border-radius: 2.4rem;
   overflow: hidden;
   min-height: 37.7rem;
@@ -1423,17 +1431,20 @@ body {
   .contents { padding: 5.6rem 2.3rem 6.4rem; }
   .contents__list {
     margin-top: 4.7rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3.3rem 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
   }
-  .contents__icon { height: 8.4rem; margin-bottom: 2.1rem; }
-  .contents__icon img { height: 8.4rem; }
-  .contents__name { font-size: 1.5rem; margin-bottom: 1rem; }
-  .contents__desc { font-size: .9rem; }
+  .contents__item { width: 25.2rem; }
+  .contents__photo { border-radius: 1.4rem; margin-bottom: 2.2rem; }
+  .contents__name { font-size: 1.7rem; margin-bottom: .8rem; }
+  .contents__desc { font-size: 1rem; }
+
+  /* ツアースケジュール */
+  .schedule { margin: 6.4rem 0 0; }
 
   /* 募集要項バナー */
-  .banner { margin: 4.4rem 0 0; min-height: 16.6rem; border-radius: 2.4rem; }
+  .banner { margin: 7.6rem 0 0; min-height: 16.6rem; border-radius: 2.4rem; }
   .banner__bg img { transform: scale(1.5); object-position: 30% -35%; transform-origin: 30% 15%; }
   .banner__body { width: 100%; padding: 4.4rem 0 3.6rem; text-align: center; }
   .banner__title { justify-content: center; font-size: 2.1rem; }
