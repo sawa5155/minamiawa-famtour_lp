@@ -512,7 +512,6 @@ body {
 }
 .area__viewport {
   width: 100%;
-  overflow: hidden;
 }
 .area__track {
   display: flex;
